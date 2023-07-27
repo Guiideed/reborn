@@ -12,7 +12,7 @@ public class Programa {
 		System.out.println("Qual o nome do aluno(a)");
 		aluno.nomeAluno = leitor.nextLine();
 		
-		System.out.println("Quais foram as notas de seus 3 trimestres?:");
+		System.out.println("Quais foram as notas de seus 3 trimestres?: ");
 		aluno.pTrimestre = leitor.nextDouble();		
 		aluno.sTrimestre = leitor.nextDouble();		
 		aluno.tTrimestre = leitor.nextDouble();		
