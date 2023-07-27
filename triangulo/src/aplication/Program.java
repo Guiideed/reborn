@@ -11,8 +11,6 @@ public class Program {
 	Triangle x,y;
 	x = new Triangle();
 	y = new Triangle();
-	Triangle texto = new Triangle();
-	Triangle valor = new Triangle();
 	System.out.println("insira o tamanho dos lados do triangulo X");
 	x.a = sc.nextDouble();
 	x.b = sc.nextDouble();
@@ -30,7 +28,6 @@ public class Program {
 	sc.close();
 	
 	Triangle.maiorArea(areaX, areaY);
-	texto.textoQualquer();
 	}
 
 	

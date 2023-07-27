@@ -10,16 +10,13 @@ public class Triangle {
 		return Math.sqrt(p*(p-a)*(p-b)*(p-c));
 		
 	}
-	public void textoQualquer(){
-		System.out.println("AAAAAAAAAAAAA");
-	}
 	
 	public static String maiorArea(double area, double area2) {
 		String maiorNum;
 		if(area > area2) {
-			maiorNum= "OOOOOOOOOO";
+			maiorNum= "O maior triangulo é o X";
 		}else {
-			maiorNum="llllllllll";
+			maiorNum="O maior pe o triangulo Y";
 		}
 		return "Então "+maiorNum;
 	}
