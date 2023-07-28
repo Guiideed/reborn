@@ -5,6 +5,17 @@ public class Produto {
 		public double preco;
 		public int quantidadeEstoque;
 		
+		
+		
+		//criei um contrutor para que o objeto nao seja instanciado sem valor!!
+		//o construtor tem o mesmo nome da classe e tem nos parametros os valores que devem ser obrigatorios!!
+		public Produto(String nomeProduto, double preco, int quantidadeEstoque) {
+			this.nomeProduto = nomeProduto;
+			this.preco = preco;
+			this.quantidadeEstoque= quantidadeEstoque;
+		}
+		
+		
 		public double valorTotalEstoque() {
 			
 			return preco*quantidadeEstoque;

@@ -9,18 +9,20 @@ public class Program {
 	public static void main(String[]args) {
 		Locale.setDefault(Locale.US);
 		Scanner leitor = new Scanner(System.in);
-		Produto produto = new Produto();
+		
 		int quantidade;
 		
-		System.out.println("Adicione os dados do protudo");
+		System.out.println("Adicione os dados do produto");
 		
 		System.out.println("Nome: ");
-		produto.nomeProduto =  leitor.nextLine();
+		String nome =  leitor.nextLine();
 		System.out.println("Preço: ");
-		produto.preco =  leitor.nextDouble();
+		Double preco =  leitor.nextDouble();
 		System.out.println("Quantidade em estoque: ");
-		produto.quantidadeEstoque =  leitor.nextInt();
-		
+		int quantidadeEstoque =  leitor.nextInt();
+		//deve ser instanciado depois, pois deve primeiro receber os valores 
+		//a partir de agora, não há mais produto vazio
+		Produto produto = new Produto(nome,preco,quantidadeEstoque);
 		System.out.println("Dados do produto: ");
 		System.out.println(produto);
 		
@@ -28,7 +30,7 @@ public class Program {
 		
 		System.out.println("Deseja adicionar ou remover do estoque?");
 		
-		System.out.println("Digite 1 para adicionar e 2 para remover");
+		System.out.println("Digite 1 para adicionar e 0 para remover");
 		int resposta = leitor.nextInt();
 		
 		
