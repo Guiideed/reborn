@@ -2,7 +2,7 @@ package entities;
 
 public class Produto {
 		public String nomeProduto;
-		public double preco;
+		private double preco;
 		public int quantidadeEstoque;
 		
 		
@@ -13,6 +13,22 @@ public class Produto {
 			this.nomeProduto = nomeProduto;
 			this.preco = preco;
 			this.quantidadeEstoque= quantidadeEstoque;
+		}
+		public Produto(String nomeProduto, double preco ) {
+			this.nomeProduto = nomeProduto;
+			this.preco = preco;
+			
+			
+		}
+		
+		public double getPreco() {
+			return preco;
+			
+		}
+		
+		public void setPreco(double preco) {
+			this.preco = preco;
+			
 		}
 		
 		

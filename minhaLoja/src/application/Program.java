@@ -19,12 +19,14 @@ public class Program {
 		System.out.println("Preço: ");
 		Double preco =  leitor.nextDouble();
 		System.out.println("Quantidade em estoque: ");
-		int quantidadeEstoque =  leitor.nextInt();
+		
 		//deve ser instanciado depois, pois deve primeiro receber os valores 
 		//a partir de agora, não há mais produto vazio
-		Produto produto = new Produto(nome,preco,quantidadeEstoque);
+		Produto produto = new Produto(nome,preco);
+		produto.setPreco(preco);
 		System.out.println("Dados do produto: ");
 		System.out.println(produto);
+		System.out.println(produto.getPreco());
 		
 		
 		
