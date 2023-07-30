@@ -33,7 +33,22 @@ public class Program {
 		System.out.println("Dados da conta");
 		System.out.println(conta);
 		
+		System.out.println("Quanto deseja depositar? :");
+		conta.deposito(leitor.nextDouble());
+		System.out.println("Dados atualizados: ");
+		System.out.println(conta);
 		
+		
+		System.out.println("");
+		System.out.println("Quanto deseja sacar? ");
+		conta.saque(leitor.nextDouble());
+		
+		if(conta.getSaldo()< 0) {
+			System.out.println("Você não tem saldo suficiente");
+		}else {
+			System.out.println("Saque feito com sucess!!");
+			System.out.println(conta);
+		}
 		
 		
 		leitor.close();

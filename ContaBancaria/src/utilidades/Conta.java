@@ -3,7 +3,7 @@ package utilidades;
 public class Conta {
 		private int numeroConta;
 		private String nomeTitular;
-		private Double saldo;
+		private double saldo;
 		
 		
 		public Conta(int numeroConta, String nomeTitular, double depositoInicial) {
@@ -46,7 +46,7 @@ public class Conta {
 		
 		
 		public String toString() {
-			return "Conta " + numeroConta  + "----Titular : " + nomeTitular + "----Saldo: " + String.format("%.2f", saldo) ;
+			return "Conta " + numeroConta  + "----Titular  " + nomeTitular + "----Saldo  " + String.format("%.2f", saldo) ;
 		}
 		
 		
