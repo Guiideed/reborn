@@ -22,7 +22,7 @@ public class Conta {
 		
 
 		public int getNumeroConta() {
-			return numeroConta;
+			return  numeroConta;
 		}
 		
 		public String getNomeTitular() {
