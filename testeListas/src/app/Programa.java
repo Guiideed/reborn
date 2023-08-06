@@ -4,50 +4,54 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Programa {
+public class Programa{
 	public static void main(String[]args) {
 		
+		//não aceita tipo primitivo
+		//array list é a classe que implementa a interface
 		List<String> lista = new ArrayList<>();
-		//adiciona na lista
+		
+		//adiciona a lista algum dado
 		lista.add("Maria");
-		lista.add("Guilherme");
-		lista.add("Joao");
 		lista.add("Alex");
-		lista.add("Joaquin");
-		lista.add("Aline");
+		lista.add("Bob");
+		lista.add("Anna");
 		
-		//insere em determinada posicao
-		lista.add(2, "Lucas");
+		//adiciona em uma posicao especifica
+		lista.add(2, "Marcos");
 		
-		//mostra o tamanho da lista
+		//retorna o tamanho da lista 
 		System.out.println(lista.size());
-		
-		
-		
-		
-		for(String nomes : lista) {
-			System.out.println(nomes);
+		//percorre a lista
+		for(String listaNomes : lista) {
+			System.out.println(listaNomes);
+		}
+		System.out.println("-----------------");
+	
+		//remove se o valor de x for igual a 'M'
+		lista.removeIf(x -> x.charAt(0) == 'M');
+		for(String listaNomes : lista) {
+			System.out.println(listaNomes);
+			
 		}
 		
-		System.out.println("----------------------------");
-		lista.remove("Joaquin");
-		lista.removeIf(x -> x.charAt(0) =='M');
-		lista.removeIf(x -> x.charAt(0) =='G');
+		System.out.println("-----------------");
 		
-		for(String nomes :lista) {
-			System.out.println(nomes);
+		System.out.println(lista.indexOf("Anna"));
+		
+		System.out.println("-----------------");
+		
+		//retorna apenas o que estiver o nome comecando com A
+		List<String> resultado = lista.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+		
+		for(String result : resultado) {
+			System.out.println(result);
+		
 		}
 		
-		
-		System.out.println("----------------------------");
-		
-		System.out.println("Indice do Joao : " + lista.indexOf("Joao"));
-		System.out.println("Indice da Aline : "+ lista.indexOf("Aline"));
-		
-		System.out.println("----------------------------");
-		List<String> resultado = lista.stream().filter(x-> x.charAt(0) =='A').collect(Collectors.toList());
-		for(String resultados : resultado) {
-			System.out.println(resultados);
-		}
+		System.out.println("-----------------");
 	}
-} 
+	
+	
+	
+}
