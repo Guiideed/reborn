@@ -4,11 +4,12 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Programa{
 	public static void main(String[]args) {
 		
-		
+		Scanner leitor = new Scanner(System.in);
 		//imprimir data de agora
 		LocalDate d01 = LocalDate.now();	
 		
@@ -36,8 +37,18 @@ public class Programa{
 		//Texto customizado usando o DateTimeFormatter com horas também
 		LocalDateTime d09 = LocalDateTime.parse("20/07/2022 01:30", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
 		
+		int ano = leitor.nextInt();
+		int mes = leitor.nextInt();
+		int dia = leitor.nextInt();
+		
+		
+		
+		
+		
+		
+		
 		//dia, mes e ano para data
-		LocalDate d10 = LocalDate.of(2022, 7, 20);
+		LocalDate d10 = LocalDate.of(ano, mes, dia);
 		
 		//dia, mes ano e hora para DateTime
 		LocalDateTime d11 = LocalDateTime.of(2022, 7, 20, 1,30);
@@ -56,6 +67,8 @@ public class Programa{
 		System.out.println("d09 = "+ d09);
 		System.out.println("d10 = "+ d10);
 		System.out.println("d11 = "+ d11);
+		
+		leitor.close();
 	}
 	
 }
