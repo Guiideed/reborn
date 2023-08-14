@@ -85,8 +85,8 @@ public class Trabalhador {
 	public double renda(int ano, int mes) {
 		double soma = salarioBase;
 		Calendar cal = Calendar.getInstance();
-		
 		for(ContratoPorHora c: contratos) {
+				cal.setTime(c.getData());
 				int c_ano = cal.get(Calendar.YEAR);
 				int c_mes = cal.get(Calendar.MONTH) +1 ;
 				if(ano == c_ano && mes ==c_mes) {

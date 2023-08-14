@@ -40,6 +40,8 @@ public class ContratoPorHora {
 	public void setHoras(Integer horas) {
 		this.horas = horas;
 	}
+	
+	
 	public double valorTotal() {
 		return valorPorHora * horas;
 	}
